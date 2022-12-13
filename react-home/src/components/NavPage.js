@@ -1,26 +1,50 @@
 import React from 'react'
-// import { Routes, Route } from "react-router-dom";
+//import { Routes, Route } from "react-router-dom";
 import FoodLog from '../pages/Foodlog'
 import HealthSpace from '../pages/HealthSpace'
 import Home from '../pages/Home'
 import Settings from '../pages/Settings'
+import ReactDOM from 'react-dom/client';
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+
 
 const NavPage = () => {
-    
+  createBrowserRouter
+  (
+    [
+    {
+      path: "/Home",
+      element: <Home />
+    },
+    {
+      path: "/FoodLog",
+      element: <FoodLog/>
   
-return (
-    null
-//     <React.Fragment>
-//     <section>
-//       <Routes>
-//       <Route path="/" element={<Home />} />
-//       <Route path="/foodlog" element={<FoodLog />} />
-//       <Route path="/healthspace" element={<HealthSpace />} />
-//       <Route path="/settings" element={<Settings />} />
-//       </Routes>
-//     </section>
-//   </React.Fragment>
-  )
+    },
+    {
+      path: "/HealthSpace",
+      element: <HealthSpace/>
+  
+    },
+    {
+      path: "/Settings",
+      element: <Settings/>
+  
+    },
+    
+  ]);
+  
 }
 
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//   <React.StrictMode>
+//     <RouterProvider router={NavPage} />
+
+//   </React.StrictMode>
+// );
 export default NavPage

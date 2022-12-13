@@ -22,7 +22,6 @@ const NavBar = () => {
                               <span className='centered'>{item.icon }</span>
                               <span>{item.title }</span>
                               </NavLink>
- 
                           </div>
                       </div>
                   )
